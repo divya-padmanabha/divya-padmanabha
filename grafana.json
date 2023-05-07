@@ -1,0 +1,28 @@
+{
+  "from": "now-1h",
+      "to": "now",
+      "refresh": "5s"
+    },
+    "annotations": {
+      "list": []
+    },
+    "editable": true,
+    "gnetId": null,
+    "graphTooltip": 0,
+    "links": [],
+    "panelsJSON": "[{\"id\":1,\"type\":\"graph\",\"title\":\"Number of Requests per Second\",\"datasource\":\"influxdb_datasource\",\"targets\":[{\"measurement\":\"requests\",\"tags\":{\"locust_name\":\"all_requests\"},\"select\":[[{\"type\":\"field\",\"params\":[\"value\"]},{\"type\":\"mean\",\"params\":[]}]],\"groupBy\":[{\"type\":\"time\",\"params\":[\"$interval\",null]}]}],\"legend\":{\"show\":true},\"tooltip\":{\"shared\":true,\"sort\":0,\"value_type\":\"individual\"}},{\"id\":2,\"type\":\"graph\",\"title\":\"Response Time Percentile\",\"datasource\":\"influxdb_datasource\",\"targets\":[{\"measurement\":\"response_time\",\"tags\":{\"locust_name\":\"all_requests\"},\"select\":[[{\"type\":\"field\",\"params\":[\"value\"]},{\"type\":\"percentile\",\"params\":[\"95\"]}]],\"groupBy\":[{\"type\":\"time\",\"params\":[\"$interval\",null]}]}],\"legend\":{\"show\":true},\"tooltip\":{\"shared\":true,\"sort\":0,\"value_type\":\"individual\"}},{\"id\":3,\"type\":\"table\",\"title\":\"Locust Stats\",\"datasource\":\"influxdb_datasource\",\"targets\":[{\"measurement\":\"stats\",\"tags\":{\"locust_name\":\"all_requests\"},\"select\":[[{\"type\":\"field\",\"params\":[\"value\"]},{\"type\":\"last\",\"params\":[]}]],\"orderByTime\":\"ASC\",\"groupBy\":[{\"type\":\"time\",\"params\":[\"$interval\",null]},{\"type\":\"tag\",\"params\":[\"name\"]}],\"rawQuery\":false,\"rawParams\":\"\"}],\"fontSize\":\"80%\",\"columns\":[{\"text\":\"Time\",\"type\":\"time\"},{\"text\":\"Name\",\"type\":\"string\"},{\"text\":\"Value\",\"type\":\"number\",\"decimals\":2}]}]",
+    "refresh": false,
+    "schema": "grafana",
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": []
+    },
+    "timeFrom": null,
+    "timeShift": null,
+    "title": "Locust Performance Metrics",
+    "uid": null
+  },
+  "folderId": null,
+  "overwrite": false
+}
